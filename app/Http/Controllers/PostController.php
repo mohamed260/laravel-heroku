@@ -15,7 +15,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $url = 'http://newsapi.org/v2/everything?q=bitcoin&from=2020-05-22&sortBy=publishedAt&apiKey=dc541b09899c42ed8fe9abcf935f9a76';
+        $url = 'http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=dc541b09899c42ed8fe9abcf935f9a76';
         $posts = Zttp::get($url)->json();
         return view('posts', compact('posts'));
         // return $posts;

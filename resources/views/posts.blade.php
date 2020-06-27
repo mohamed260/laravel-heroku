@@ -11,7 +11,7 @@
              
         }
         .container{
-            width: 500px;
+            width: 850px;
         }
         
         </style>
@@ -23,7 +23,7 @@
 
                 <ul class="list-group">
                     <li class="list-group-item active">{{ $post['title'] }}</li>
-                    <li class="list-group-item"><img src="{{ $post['urlToImage'] }}" width="430" hieght="250">{{ $post['content'] }}</li>
+                    <li class="list-group-item"><img src="{{ $post['urlToImage'] }}" width="780" hieght="250"><br>{{ $post['content'] }}</li>
                     <li class="list-group-item">{{ $post['source']['name'] }} {{ $post['publishedAt'] }}</li>
                 </ul>
                 <br>

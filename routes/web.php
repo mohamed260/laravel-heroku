@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Zttp\Zttp;
 use Illuminate\Http\Request;
 
 /*
@@ -15,8 +14,24 @@ use Illuminate\Http\Request;
 |
 */
 
-// Route::get('/', function () {
+// Route::get('welcome', function () {
 //     return view('welcome');
 // });
 
-Route::get('/', 'PostController@index');
+Route::get('/create', function () {
+    return view('create');
+});
+
+// Route::get('/show', function () {
+//     return view('show');
+// });
+
+
+
+Route::get('/', 'HttpController@index');
+
+
+
+Route::post('store','PostController@store');
+
+Route::get('show','PostController@show');

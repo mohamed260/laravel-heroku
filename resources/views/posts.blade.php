@@ -1,38 +1,18 @@
-<!DOCTYPE html>
-<html>
-    <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
-        <title></title>
-        <style>
-        body{
-            background-color: #ddd;
-             
-        }
-        .container{
-            width: 500px;
-        }
-        
-        </style>
-    </head>
+@extends('welcome')
 
-    <body>
-        <div class="container">
+@section('content')
+        
             @foreach ($posts['articles'] as $post)
 
                 <ul class="list-group">
-                    <li class="list-group-item active">{{ $post['title'] }}</li>
-                    <li class="list-group-item"><img src="{{ $post['urlToImage'] }}" width="430" hieght="250">{{ $post['content'] }}</li>
+                    <li class="list-group-item active btn-dark">{{ $post['title'] }}</li>
+                    <li class="list-group-item"><img src="{{ $post['urlToImage'] }}" width="430" hieght="250"><br>{{ $post['content'] }}</li>
                     <li class="list-group-item">{{ $post['source']['name'] }} {{ $post['publishedAt'] }}</li>
                 </ul>
                 <br>
-                
+          
             @endforeach
 
+         
 
-            <script src="{{ URL::asset('js/bootstrapp.js') }}"></script>
-            <script src="{{ URL::asset('js/bootstrapp.min.js') }}"></script>
-        </div>
-    </body>
-</html>
+@endsection
